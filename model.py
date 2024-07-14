@@ -154,7 +154,7 @@ def generateModel(list_headline, list_newsdes, list_link):
     
 
 def postdata(list_link, list_headline, list_newsdes, list_img, list_credit, list_domain):
-    url = 'https://yashkassa.pythonanywhere.com/news/singlepostnews'
+    url = 'https://quicksolutions.pythonanywhere.com/news/singlepostnews'
     headers = {'Content-Type': 'application/json', 'Accept':'application/json'}
     data = {"links": list_link, "headlines": list_headline, "description":list_newsdes, "images":list_img, "credits":list_credit, "domains":list_domain}
     response = requests.post(url, json=json.dumps(data), headers=headers)
