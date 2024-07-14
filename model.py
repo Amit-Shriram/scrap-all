@@ -145,7 +145,7 @@ def generateModel(list_headline, list_newsdes, list_link):
     global count
     summary_headline =  summrize(list_headline)
     summary_des = summrize(list_newsdes[:1024])
-    url = 'https://yashkassa.pythonanywhere.com/news/addsummary'
+    url = 'https://quicksolutions.pythonanywhere.com/news/addsummary'
     headers = {'Content-Type': 'application/json', 'Accept':'application/json'}
     data = {"link": list_link, "summary_headline": summary_headline[0]['summary_text'], "summary_des":summary_des[0]['summary_text'], "type":"All"}
     response = requests.post(url, json=json.dumps(data), headers=headers)
